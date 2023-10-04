@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace MicroSample.ProductService.Controllers
 {
-    [Route("prdSrv/[controller]")]
+    [Route("ProductService/[controller]")]
     [ApiController]
     public class ProductController : ControllerBase
     {
