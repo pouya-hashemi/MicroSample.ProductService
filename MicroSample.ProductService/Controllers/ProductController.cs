@@ -52,7 +52,7 @@ namespace MicroSample.ProductService.Controllers
 
             return CreatedAtAction("GetById", new { Id = product.Id }, product);
         }
-        [HttpPut("id")]
+        [HttpPut("{id}")]
         public async Task<IActionResult> Put(int id, ProductEditDto productEditDto)
         {
             if (productEditDto == null ||
@@ -72,7 +72,7 @@ namespace MicroSample.ProductService.Controllers
 
             return NoContent();
         }
-        [HttpDelete("id")]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
             var product = await _appDbContext.Products.FirstOrDefaultAsync(f => f.Id == id);
